@@ -4,6 +4,8 @@ import javafx.scene.Group;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.Pane;
 
+import java.util.Deque;
+
 public class MyDrawPane extends ScrollPane{
     //重画没写
     public static Pane drawPane = new Pane();
@@ -22,6 +24,21 @@ public class MyDrawPane extends ScrollPane{
     }
 
     private static void draw() {
+        MyDrawPane.g.getChildren().clear();
+        //清空操作
+
+        //Deque.insert(NodeList.list);
+        //填入新节点
+        for (int i = 0; i < NodeList.list.size(); i++) {
+            TreeNode node = NodeList.list.get(i);
+            node.setText(node.getTxt());
+            node.setStyle(
+                    "-fx-background-color:#d6ecf0;"+
+                    "-fx-background-radius:10;"+
+                    "-fx-padding:10;"
+            );
+
+        }
     }
 
     public static void redraw() {
