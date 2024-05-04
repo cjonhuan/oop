@@ -2,6 +2,8 @@ package application;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.control.SplitPane;
+import javafx.scene.input.KeyCode;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
@@ -12,7 +14,7 @@ public class Main extends Application {
     }
 
     public static BorderPane pane;
-    public static Stage stage;
+    public static Stage primarystage;
     public static int MinWidth = 800;
     public static int MaxWidth = 800;
     public static int MaxHeight = 800;
@@ -28,13 +30,42 @@ public class Main extends Application {
         pane.setTop(menuBar.menu);
         //菜单
 
-        //MyButtonBar buttonBar = new MyButtonBar();
-        //pane.getChildren().add(buttonBar.ap);
+        MyButtonBar buttonBar = new MyButtonBar();
+        pane.getChildren().add(buttonBar.ap);
         //工具栏
 
+        MyDrawPane drawPane = new MyDrawPane();
+        //drawPane.setMinWidth(800);
+        //drawPane.setMinHeight(570);
+        //绘图区
+
+        MyTreeView listView = new MyTreeView();
+        MyTreeView.ap.setMinWidth(150);
+        MyTreeView.ap.setMaxWidth(200);
+        //结构树
+
+        SplitPane spane = new SplitPane();
+        spane.setDividerPositions(0.2);
+        //spane.getItems().addAll(drawPane,MyTreeView.ap);
+        pane.setCenter(spane);
+        primarystage = stage;
+        //SetTitle.changeTitle(primarystage);
 
         Scene scene = new Scene(pane,1000,600);
-
+        scene.setOnKeyPressed(event -> {
+            if (event.isControlDown()) {
+                if(event.getCode() == KeyCode.EQUALS||event.getCode() == KeyCode.PLUS) {
+                    Change.enlarge();
+                }
+                if(event.getCode() == KeyCode.MINUS) {
+                    Change.reduce();
+                }
+                if(event.getCode() == KeyCode.DIGIT0) {
+                    Change.recover();
+                }
+            }
+        });
+        //监听调整指令
         stage.setScene(scene);
         stage.show();
     }
