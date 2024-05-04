@@ -22,4 +22,7 @@ public class MyDrawPane extends ScrollPane{
 
     private static void draw() {
     }
+
+    public static void redraw() {
+    }
 }

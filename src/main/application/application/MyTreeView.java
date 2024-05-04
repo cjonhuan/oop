@@ -10,4 +10,6 @@ import java.util.Collection;
 public class MyTreeView extends TreeView<Label> {
     public static AnchorPane ap = new AnchorPane();
 
+    public static void setTreeView() {
+    }
 }

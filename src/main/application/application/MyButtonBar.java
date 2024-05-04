@@ -27,7 +27,7 @@ public class MyButtonBar {
         eventHandler();
         //MouseClick.Click();
         //MouseClick.DoubleClick();
-        Change.zoom();
+        Change.change();
     }
 
     private void eventHandler() {
