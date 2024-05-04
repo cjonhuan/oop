@@ -24,12 +24,12 @@ public class Main extends Application {
         //窗口设置
 
         MyMenuBar menuBar = new MyMenuBar();
-        pane.setTop(menuBar.nemu);
+        pane.setTop(menuBar.menu);
         //菜单
 
-        MyButtonBar buttonBar = new MyButtonbar();
-
-
+        //MyButtonBar buttonBar = new MyButtonBar();
+        //pane.getChildren().add(buttonBar.ap);
+        //工具栏
 
     }
 }
