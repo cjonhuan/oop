@@ -15,11 +15,12 @@ public class Main extends Application {
 
     public static BorderPane pane;
     public static Stage primarystage;
-    public static int MinWidth = 800;
-    public static int MaxWidth = 800;
-    public static int MaxHeight = 800;
+    public static double MinWidth = 800;
+    public static double MaxWidth = 800;
+    public static double MaxHeight = 800;
     @Override
     public void start(Stage stage) throws Exception {
+
         pane = new BorderPane();
         pane.setMinWidth(MinWidth);
         pane.setMaxWidth(MaxWidth);
@@ -35,18 +36,18 @@ public class Main extends Application {
         //工具栏
 
         MyDrawPane drawPane = new MyDrawPane();
-        //drawPane.setMinWidth(800);
-        //drawPane.setMinHeight(570);
+        drawPane.setMinWidth(800);
+        drawPane.setMinHeight(570);
         //绘图区
 
         MyTreeView listView = new MyTreeView();
-        MyTreeView.ap.setMinWidth(150);
-        MyTreeView.ap.setMaxWidth(200);
+        listView.ap.setMinWidth(150);
+        listView.ap.setMaxWidth(200);
         //结构树
 
         SplitPane spane = new SplitPane();
         spane.setDividerPositions(0.2);
-        //spane.getItems().addAll(drawPane,MyTreeView.ap);
+        spane.getItems().addAll(drawPane,MyTreeView.ap);
         pane.setCenter(spane);
         primarystage = stage;
         //SetTitle.changeTitle(primarystage);
