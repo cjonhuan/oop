@@ -8,6 +8,7 @@ import javafx.scene.control.ButtonBar;
 import javafx.scene.layout.AnchorPane;
 
 public class MyButtonBar {
+    //状态没写
     public AnchorPane ap = new AnchorPane();
 
     public static ButtonBar Bar = new ButtonBar();

@@ -5,6 +5,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.SplitPane;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 public class Main extends Application {
@@ -50,7 +51,8 @@ public class Main extends Application {
         spane.getItems().addAll(drawPane,MyTreeView.ap);
         pane.setCenter(spane);
         primarystage = stage;
-        //SetTitle.changeTitle(primarystage);
+        SetTitle.changeTitle(primarystage);
+
 
         Scene scene = new Scene(pane,1000,600);
         scene.setOnKeyPressed(event -> {
@@ -67,7 +69,10 @@ public class Main extends Application {
             }
         });
         //监听调整指令
+        scene.setFill(Color.BLUE);
+        //按钮颜色
         stage.setScene(scene);
+
         stage.show();
     }
 }

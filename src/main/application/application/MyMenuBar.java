@@ -7,6 +7,7 @@ import javafx.scene.control.*;
 import javafx.scene.input.KeyCombination;
 
 public class MyMenuBar {
+    //状态基没写
     public MenuBar menu = new MenuBar();
     MenuItem openItem = new MenuItem("打开");
     MenuItem saveItem = new MenuItem("保存");

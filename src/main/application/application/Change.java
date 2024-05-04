@@ -5,6 +5,7 @@ import javafx.scene.transform.Scale;
 
 public class Change {
     //调整结构区大小所用类
+    //基本写完
     public static int number = 0;
     public static void enlarge() {
         if(number < 5){

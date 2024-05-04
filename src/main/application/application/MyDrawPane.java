@@ -5,6 +5,7 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.Pane;
 
 public class MyDrawPane extends ScrollPane{
+    //重画没写
     public static Pane drawPane = new Pane();
     public static ScrollPane sp = new ScrollPane();
     public static Group g = new Group();
