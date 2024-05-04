@@ -4,12 +4,13 @@ import javafx.scene.control.OverrunStyle;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.TextAlignment;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class TreeNode extends TreeData{
     //基本写完
+    private int pid;
+    private int nid;
     private int pos = 1;
     private double left = 0;
     private double top = 0;
@@ -29,6 +30,22 @@ public class TreeNode extends TreeData{
         this.setTextOverrun(OverrunStyle.ELLIPSIS);
         this.setTextFill(Color.WHITE);
         this.setFont(new Font("Arial",20));
+    }
+
+    public int getPid() {
+        return pid;
+    }
+
+    public void setPid(int pid) {
+        this.pid = pid;
+    }
+
+    public int getNid() {
+        return nid;
+    }
+
+    public void setNid(int nid) {
+        this.nid = nid;
     }
     public int getPos() {
         return pos;

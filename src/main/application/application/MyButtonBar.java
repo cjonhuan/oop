@@ -10,7 +10,6 @@ import javafx.scene.layout.AnchorPane;
 public class MyButtonBar {
     //状态没写
     public AnchorPane ap = new AnchorPane();
-
     public static ButtonBar Bar = new ButtonBar();
     public static Button b1 = new Button("新建");
     public static Button b2 = new Button("增加子节点");
