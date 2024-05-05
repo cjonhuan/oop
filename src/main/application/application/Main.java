@@ -43,11 +43,11 @@ public class Main extends Application {
 
         MyTreeView listView = new MyTreeView();
         listView.ap.setMinWidth(150);
-        listView.ap.setMaxWidth(200);
+        listView.ap.setMaxWidth(250);//结构区和绘图区的分离
         //结构树
 
         SplitPane spane = new SplitPane();
-        spane.setDividerPositions(0.2);
+        spane.setDividerPositions(0.25);
         spane.getItems().addAll(drawPane,MyTreeView.ap);
         pane.setCenter(spane);
         primarystage = stage;
